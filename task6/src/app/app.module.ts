@@ -12,11 +12,34 @@ import {RatingModule} from 'primeng/rating';
 import {ChipsModule} from 'primeng/chips';
 
 
+import { SettingComponent } from './pro/setting/setting.component';
+import { LeftsideComponent } from './pro/leftside/leftside.component';
+import { RightsideComponent } from './pro/rightside/rightside.component';
+import { ProfileComponent } from './profile/profile/profile.component';
+import { LeftComponent } from './profile/left/left.component';
+import { LeftdocumentaionComponent } from './profile/leftdocumentaion/leftdocumentaion.component';
+import { RightComponent } from './profile/right/right.component';
+import { SkillComponent } from './skill/skill.component';
+import { LeftinfoComponent } from './skill/leftinfo/leftinfo.component';
+import { RightinfoComponent } from './skill/rightinfo/rightinfo.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     SudentComponent,
-    TestprimengComponent
+    TestprimengComponent,
+    SettingComponent,
+    LeftsideComponent,
+    RightsideComponent,
+    ProfileComponent,
+    LeftComponent,
+    LeftdocumentaionComponent,
+    RightComponent,
+    SkillComponent,
+    LeftinfoComponent,
+    RightinfoComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +50,8 @@ import {ChipsModule} from 'primeng/chips';
     PasswordModule,
     RatingModule,
     ChipsModule,
+    FontAwesomeModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
