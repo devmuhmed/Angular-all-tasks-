@@ -1,0 +1,21 @@
+<form #usersignup="ngForm"(ngSubmit)="save()">
+<div>
+  <label>ID</label>
+  <input #t2="ngModel" type="text" [(ngModel)]="id" name="sid" required [min]="10">
+  <!-- <span *ngIf="t2.invalid">id is required</span> -->
+  <span *ngIf="t2.errors?.required">id is required</span>
+  <span *ngIf="t2.errors?.min">min value for id = 10</span>
+</div>
+<div>
+  <label>firstname</label>
+  <input #t1="ngModel" type="text" [(ngModel)]="fname" name="fname" required minlength = "3">
+  <!-- <span *ngIf="t1.invalid">fname is required</span> -->
+  <span *ngIf="t1.errors?.required && t1.touched">fname is required</span>
+  <!-- <span *ngIf="t1.invalid">fname is min length 3</span> -->
+  <span *ngIf="t1.errors?.minlength && t1.touched">fname is min length 3</span>
+</div>
+<button type="submit" [disabled]="usersignup.invalid">add</button>
+</form>
+<button (click)="show(usersignup)">show</button>
+<button (click)="sh(t1)">sh</button>
+{{usersignup.value |json}}
