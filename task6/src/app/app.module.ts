@@ -23,6 +23,7 @@ import { SkillComponent } from './skill/skill.component';
 import { LeftinfoComponent } from './skill/leftinfo/leftinfo.component';
 import { RightinfoComponent } from './skill/rightinfo/rightinfo.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EditprofileComponent } from './editprofile/editprofile.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     RightComponent,
     SkillComponent,
     LeftinfoComponent,
-    RightinfoComponent
+    RightinfoComponent,
+    EditprofileComponent
   ],
   imports: [
     BrowserModule,
