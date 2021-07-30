@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <form>
+                <form #editprofile="ngForm">
                     <div class="row mb-5">
                         <div class="col-md-5">
                         </div>
@@ -30,31 +30,30 @@
                     <div class="row mb-4">
                         <div class="col-sm-6">
                             <label for="first_name" class="form-label">First Name<em class="text-danger">*</em></label>
-                            <input type="text" name="first_name" class="form-control" required>
+                            <input type="text"  [(ngModel)]="first_name" name="first_name" class="form-control" required>
                         </div>
                         <div class="col-sm-6">
                             <label for="last_name" class="form-label">Last Name<em class="text-danger">*</em></label>
-                            <input type="text" name="last_name" class="form-control" required>
+                            <input type="text" [(ngModel)]="last_name" name="last_name" class="form-control" required>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <div class="col-sm-6">
                             <label for="counter" class="form-label">Country<em class="text-danger">*</em></label>
-                            <select class="form-select" aria-label="Default select example" name="country" required>
-                                <option value="egypt">Egypt</option>
-                            </select>
+                            <input class="form-control" [(ngModel)]="country" name="country" readonly>
                         </div>
                         <div class="col-sm-6">
                             <label for="language" class="form-label">Language<em class="text-danger">*</em></label>
-                            <select class="form-select" aria-label="Default select example" name="language" required>
-                                <option value="arabic">العربية</option>
+                            <select class="form-select" aria-label="Default select example" [(ngModel)]="language" name="language" required>
+                                <option value="arabic">Arabic</option>
+                                <option value="english">English</option>
                             </select>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <div class="col-sm-6">
                             <label for="gender" class="form-label">Gender<em class="text-danger">*</em></label>
-                            <select class="form-select" aria-label="Default select example" name="gender" required>
+                            <select class="form-select" aria-label="Default select example" [(ngModel)]="gender" name="gender" required>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
                             </select>
@@ -89,7 +88,7 @@
                     </div>
                     <div class="row mb-4">
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary" type="button">Save</button>
+                            <button class="btn btn-primary" type="button" (click)="show(editprofile)">Save</button>
                         </div>
                     </div>
                 </form>
